@@ -25,6 +25,12 @@ public class MainActivity
         setContentView(R.layout.activity_main);
 
         BottomNavigationView btNav = findViewById(R.id.bottom_navigation);
+
+        // init page load
+        loadFragment(new ExploreFragment());
+        btNav.setSelectedItemId(R.id.nav_explore);
+
+        // get item selected
         btNav.setOnNavigationItemSelectedListener(this);
     }
 
